@@ -10,7 +10,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/nagapplications/simple-demo-app.git'
+                git branch: 'main',                                              // ✅ add this
+                    url: 'https://github.com/nagapplications/simple-demo-app.git'
             }
         }
 
