@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/<your-username>/simple-demo-app.git'
+                git 'https://github.com/nagapplications/simple-demo-app.git'
             }
         }
 
