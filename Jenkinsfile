@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+            PATH = "/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        }
+
     tools {
         maven 'Maven'
         git 'Git'
@@ -35,7 +39,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh '/usr/local/bin/docker build -t simple-demo-app:1.0 .'
+                sh 'docker build -t simple-demo-app:1.0 .'
             }
         }
     }
