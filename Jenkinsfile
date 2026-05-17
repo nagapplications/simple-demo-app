@@ -33,15 +33,9 @@ pipeline {
             }
         }
 
-        stage('Debug PATH') {
-            steps {
-                sh 'echo $PATH'
-            }
-        }
-
         stage('Docker Build') {
             steps {
-                sh 'docker build -t simple-demo-app:1.0 .'
+                sh '/usr/local/bin/docker docker build -t simple-demo-app:1.0 .'
             }
         }
     }
