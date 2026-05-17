@@ -32,5 +32,11 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t simple-demo-app:1.0 .'
+            }
+        }
     }
 }
