@@ -35,7 +35,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh '/usr/local/bin/docker docker build -t simple-demo-app:1.0 .'
+                sh '/usr/local/bin/docker build -t simple-demo-app:1.0 .'
             }
         }
     }
